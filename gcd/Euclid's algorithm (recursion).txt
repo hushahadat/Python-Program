@@ -1,0 +1,13 @@
+#gcd using Euclid's algorithm
+def gcd(m,n):
+    if m<n:
+        (m,n)=(n,m)
+    if(m%n)==0:
+        return(n)
+    else:
+         diff=m-n
+    return(gcd(max(n,diff),min(n,diff)))
+   
+t=gcd(10,18)
+print(t)
+    

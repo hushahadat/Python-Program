@@ -1,0 +1,10 @@
+#gcd using Final Euclid's algorithm(while loop)
+def gcd(m,n):
+    if m<n:
+        (m,n)=(n,m)
+    while(m%n)!=0:
+        (m,n)=(n,(m%n))
+    return(n)
+   
+t=gcd(16,18)
+print(t)
