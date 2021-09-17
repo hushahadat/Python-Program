@@ -1,0 +1,26 @@
+#prime upto n
+def primeupto(n):
+    list2=[]
+    for i in range(1,n+1):
+        if isprime(i):
+            list2=list2+[i]
+        else:
+            pass
+    print(list2)
+    
+def isprime(n):
+    if n==1 or n==0:
+        return 'false'
+    else:
+         return(factor(n)==[1,n])
+         
+def factor(n):
+    list1=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            list1=list1+[i]
+        else:
+            pass
+    return (list1)
+
+primeupto(100)

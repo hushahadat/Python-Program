@@ -1,0 +1,28 @@
+#first n prime number
+def nprime(n):
+    count=0
+    i=1
+    list3=[]
+    while count<=n:
+        if isprime(i):
+            list3=list3+[i]
+            count=count+1
+        i=i+1
+    print(list3)
+    
+def isprime(n):
+    if n==1 or n==0:
+        return 'false'
+    else:
+         return(factor(n)==[1,n])
+         
+def factor(n):
+    list1=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            list1=list1+[i]
+        else:
+            pass
+    return (list1)
+
+nprime(10)
